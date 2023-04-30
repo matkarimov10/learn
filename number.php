@@ -1,7 +1,10 @@
 <?php
-$numbers = isset($_POST['numbers']) ? $_POST['numbers'] : '';
-$array = explode(" ", $numbers);
-$max = max($array);
+$n = isset($_POST['number']) ? $_POST['number'] : '';
+
+for ($i = 0; $i < $n; $i+=5) {
+
+    print $i . '<br>';
+}
 
 ?>
 <!doctype html>
@@ -13,11 +16,10 @@ $max = max($array);
     <title>Document</title>
 </head>
 <body>
-<form method="post" action="">
-    <input type="text" name="numbers">
+<form action="" method="post">
+    <input type="text" name="number">
     <button type="submit">Submit</button>
-    <h1>Katta raqam: <?php echo $max?></h1>
+    <h2><?=$i?></h2>
 </form>
-
 </body>
 </html>
